@@ -1,8 +1,9 @@
 from django.db import models
 
 
+# get upload path
 def load_path(instance, filename):
-    path = '/'.join(['image', str(instance.title) + str('.jpg')])
+    path = '/'.join([str(instance.title) + str('.jpg')])
     return path
 
 
