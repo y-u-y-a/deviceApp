@@ -6,7 +6,7 @@ from .models import Device
 
 class DeviceSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        # モデルを指定
+
+        # 公開する値
         model = Device
-        # 後悔する値を指定
         fields = ['id', 'title', 'image']

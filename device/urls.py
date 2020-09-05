@@ -4,13 +4,12 @@ from django.conf.urls import include
 from device.views import DeviceViewSet
 
 
-# ルーティングを定義・追加
+# Define routings
 router = routers.DefaultRouter()
-# 'api/devices/'
-router.register('devices', DeviceViewSet)
+# 'api/device/'
+router.register('', DeviceViewSet)
 
 
 urlpatterns = [
-    # 何もない場合はrouterを参照
     path('', include(router.urls))
 ]
