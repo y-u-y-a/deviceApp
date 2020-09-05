@@ -1,12 +1,13 @@
 from rest_framework import routers
 from django.urls import path
 from django.conf.urls import include
-# from device.views import DeviceViewSet
+from device.views import DeviceViewSet
 
 
 # ルーティングを定義・追加
 router = routers.DefaultRouter()
-# router.register('devices', DeviceViewSet) # 'api/devices/'の場合
+# 'api/devices/'
+router.register('devices', DeviceViewSet)
 
 
 urlpatterns = [
