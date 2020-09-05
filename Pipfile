@@ -10,6 +10,7 @@ django = "==2.2"
 djangorestframework = "*"
 gunicorn = "*"
 mysqlclient = "*"
+pillow = "*"
 
 [scripts]
 server = "python manage.py runserver"
