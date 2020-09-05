@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+
+from .models import Device
+
+
+# 管理画面に扱うモデルを追加
+admin.site.register(Device)
