@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     # 追加
     'rest_framework',
     'device.apps.DeviceConfig',
+    'user.apps.UserConfig',
 ]
 
 MIDDLEWARE = [
