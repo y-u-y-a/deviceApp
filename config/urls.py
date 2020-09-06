@@ -1,24 +1,22 @@
 from django.contrib import admin
 from django.urls import path, include
-
-from rest_framework import routers
 from django.conf.urls.static import static
 from django.conf import settings
-# app views
-from device.views import DeviceViewSet
-from user.views import UserViewSet
+
+from rest_framework import routers
+# add views
+from core.views import UserViewSet, DeviceViewSet
 
 
 # create router instance
 router = routers.DefaultRouter()
-router.register('devices', DeviceViewSet) # 'api/devices/'
 router.register('users', UserViewSet) # 'api/users/'
+router.register('devices', DeviceViewSet) # 'api/devices/'
 
 
+# Start
 urlpatterns = [
-    # admin
     path('admin/', admin.site.urls),
-    # api
     path('api/', include(router.urls)),
 ]
 

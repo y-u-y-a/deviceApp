@@ -1,8 +1,8 @@
 from django.http import HttpResponse
 from rest_framework import viewsets
 
-from .models import User
-from .serializers import UserSerializer
+from core.models import User
+from core.serializers import UserSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):

@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from rest_framework import viewsets
 
-from .models import Device
-from .serializers import DeviceSerializer
+from core.models import Device
+from core.serializers import DeviceSerializer
 
 
 class DeviceViewSet(viewsets.ModelViewSet):
@@ -15,7 +15,7 @@ class DeviceViewSet(viewsets.ModelViewSet):
         title = request.data['title']
         image = request.data['image']
 
-        # DB登録
+        # create
         Device.create(title=title, image=image)
         message = 'create new device'
         return HttpResponse(
