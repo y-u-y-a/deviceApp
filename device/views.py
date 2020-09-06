@@ -17,7 +17,8 @@ class DeviceViewSet(viewsets.ModelViewSet):
 
         # DB登録
         Device.create(title=title, image=image)
+        message = 'create new device'
         return HttpResponse(
-            {'message': 'create new device'},
+            {'message': message},
             status=200
         )
